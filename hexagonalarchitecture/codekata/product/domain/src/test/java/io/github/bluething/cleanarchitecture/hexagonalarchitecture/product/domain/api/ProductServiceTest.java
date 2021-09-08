@@ -9,6 +9,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.List;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -70,5 +71,12 @@ class ProductServiceTest {
         IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class,
                 () -> service.deleteProduct(code));
         assertEquals("Product with code " + code+ " doesn't exist", illegalArgumentException.getMessage());
+    }
+
+    @Test
+    public void getAllProductsReturnProducts() {
+        Mockito.when(repository.findAllProducts()).thenReturn(List.of(product));
+
+        assertEquals(product, service.getAllProducts().get(0));
     }
 }
