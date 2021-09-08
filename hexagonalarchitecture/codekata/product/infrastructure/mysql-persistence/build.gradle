@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.5.4'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id 'maven-publish'
 }
 
 group = 'io.github.bluething.cleanarchitecture.hexagonalarchitecture.product'
@@ -13,6 +14,18 @@ repositories {
     mavenLocal()
 }
 
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'io.github.bluething.cleanarchitecture.hexagonalarchitecture.product'
+            artifactId = 'mysql-persistence'
+            version = '1.0.0'
+
+            from components.java
+        }
+    }
+}
+
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
@@ -21,6 +34,10 @@ configurations {
 
 bootJar {
     enabled = false
+}
+
+jar {
+    enabled = true
 }
 
 dependencies {
