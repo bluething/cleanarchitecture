@@ -44,4 +44,13 @@ class ProductServiceTest {
 
         assertEquals(product, service.createProduct(product));
     }
+
+    @Test
+    public void createProductThrowsIllegalArgumentExceptionWithErrorMessageRelatedToDuplicateEntityWhenProductAlreadyExist() {
+        Mockito.when(repository.findProductByCode(code)).thenReturn(product);
+
+        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class,
+                () -> service.createProduct(product));
+        assertEquals("Product already exist", illegalArgumentException.getMessage());
+    }
 }
