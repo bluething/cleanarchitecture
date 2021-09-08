@@ -18,7 +18,9 @@ public class ProductServiceImpl implements ProductService {
             throw new IllegalArgumentException("There is no code for the product");
         }
 
-        return null;
+        Product productCheck = repository.findProductByCode(product.getCode());
+
+        return repository.addProduct(product);
     }
 
     @Override
