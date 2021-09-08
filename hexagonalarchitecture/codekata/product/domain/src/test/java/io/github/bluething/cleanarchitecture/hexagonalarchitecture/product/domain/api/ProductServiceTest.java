@@ -62,4 +62,13 @@ class ProductServiceTest {
 
         Mockito.verify(repository).deleteProduct(product.getId());
     }
+
+    @Test
+    public void deleteProductThrowsIllegalArgumentExceptionWithErrorMessageRelatedToNotExistEntityWhenProductDoesntExist() {
+        Mockito.when(repository.findProductByCode(code)).thenReturn(null);
+
+        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class,
+                () -> service.deleteProduct(code));
+        assertEquals("Product with code " + code+ " doesn't exist", illegalArgumentException.getMessage());
+    }
 }
