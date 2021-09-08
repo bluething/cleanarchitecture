@@ -53,4 +53,13 @@ class ProductServiceTest {
                 () -> service.createProduct(product));
         assertEquals("Product already exist", illegalArgumentException.getMessage());
     }
+
+    @Test
+    public void deleteProductSuccessCallRepositoryWhenProductIsExist() {
+        Mockito.when(repository.findProductByCode(code)).thenReturn(product);
+
+        service.deleteProduct(code);
+
+        Mockito.verify(repository).deleteProduct(product.getId());
+    }
 }
