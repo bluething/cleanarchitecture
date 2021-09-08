@@ -29,6 +29,9 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void deleteProduct(String code) {
         Product productByCode = repository.findProductByCode(code);
+        if (productByCode == null) {
+            throw new IllegalArgumentException("Product with code " + code+ " doesn't exist");
+        }
 
         repository.deleteProduct(productByCode.getId());
     }
