@@ -5,7 +5,7 @@ import io.github.bluething.cleanarchitecture.hexagonalarchitecture.product.domai
 
 import java.util.List;
 
-public class ProductServiceImpl implements ProductService {
+public final class ProductServiceImpl implements ProductService {
     private final ProductRepository repository;
 
     public ProductServiceImpl(ProductRepository repository) {
