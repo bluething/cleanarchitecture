@@ -19,6 +19,9 @@ public class ProductServiceImpl implements ProductService {
         }
 
         Product productCheck = repository.findProductByCode(product.getCode());
+        if (productCheck != null) {
+            throw new IllegalArgumentException("Product already exist");
+        }
 
         return repository.addProduct(product);
     }
