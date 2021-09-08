@@ -45,6 +45,9 @@ public class MysqlProductRepositoryImpl implements ProductRepository {
     @Override
     public Product findProductByCode(String code) {
         MySQLProduct product = repository.findOneByCode(code);
-        return product.toDomain();
+        if (product != null) {
+            return product.toDomain();
+        }
+        return null;
     }
 }
