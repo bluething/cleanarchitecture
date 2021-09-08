@@ -9,4 +9,5 @@ public interface ProductRepository {
     Product addProduct(Product product);
     void deleteProduct(UUID productId);
     List<Product> findAllProducts();
+    Product findProductByCode(String code);
 }
