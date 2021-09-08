@@ -14,6 +14,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product createProduct(Product product) {
+        if (product.getId() == null) {
+            throw new IllegalArgumentException("There is no code for the product");
+        }
+
         return null;
     }
 
