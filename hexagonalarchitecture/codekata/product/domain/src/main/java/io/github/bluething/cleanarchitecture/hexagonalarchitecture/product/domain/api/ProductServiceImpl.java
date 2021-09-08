@@ -38,6 +38,6 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<Product> getAllProducts() {
-        return null;
+        return repository.findAllProducts();
     }
 }
