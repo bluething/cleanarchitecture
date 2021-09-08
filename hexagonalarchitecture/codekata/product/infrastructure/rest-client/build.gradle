@@ -10,10 +10,13 @@ sourceCompatibility = '11'
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+    implementation 'io.github.bluething.cleanarchitecture.hexagonalarchitecture.product:domain:1.0.0'
+    implementation 'io.github.bluething.cleanarchitecture.hexagonalarchitecture.product:mysql-persistence:1.0.0'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
