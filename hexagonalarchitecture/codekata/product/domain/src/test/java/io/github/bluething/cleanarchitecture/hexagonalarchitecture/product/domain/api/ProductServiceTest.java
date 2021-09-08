@@ -3,6 +3,7 @@ package io.github.bluething.cleanarchitecture.hexagonalarchitecture.product.doma
 import io.github.bluething.cleanarchitecture.hexagonalarchitecture.product.domain.Product;
 import io.github.bluething.cleanarchitecture.hexagonalarchitecture.product.domain.repository.ProductRepository;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -22,5 +23,11 @@ class ProductServiceTest {
     private void setupEach() {
         service = new ProductServiceImpl(repository);
         product = new Product(UUID.randomUUID(), "123", "asd");
+    }
+
+    @Test
+    public void createProductThrowsIllegalArgumentExceptionWhenProductIdIsEmpty() {
+        assertThrows(IllegalArgumentException.class,
+                () -> service.createProduct(new Product(null, "", "")));
     }
 }
