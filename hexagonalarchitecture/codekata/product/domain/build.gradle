@@ -16,6 +16,18 @@ configurations {
     }
 }
 
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'io.github.bluething.cleanarchitecture.hexagonalarchitecture.product'
+            artifactId = 'domain'
+            version = '1.0.0'
+
+            from components.java
+        }
+    }
+}
+
 dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.20'
     annotationProcessor 'org.projectlombok:lombok:1.18.20'
