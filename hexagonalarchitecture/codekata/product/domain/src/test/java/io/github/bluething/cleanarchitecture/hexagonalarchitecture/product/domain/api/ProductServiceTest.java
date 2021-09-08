@@ -31,9 +31,10 @@ class ProductServiceTest {
     }
 
     @Test
-    public void createProductThrowsIllegalArgumentExceptionWhenProductIdIsEmpty() {
-        assertThrows(IllegalArgumentException.class,
+    public void createProductThrowsIllegalArgumentExceptionWithErrorMessageRelatedToCodeWhenProductIdIsEmpty() {
+        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class,
                 () -> service.createProduct(new Product(null, "", "")));
+        assertEquals("There is no code for the product", illegalArgumentException.getMessage());
     }
 
     @Test
