@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/adapters/web" />
             <option value="$PROJECT_DIR$/application" />
             <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/configuration" />
           </set>
         </option>
       </GradleProjectSettings>
@@ -45,6 +46,16 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/common" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/configuration" />
+        <option name="gradleHome" value="$USER_HOME$/.sdkman/candidates/gradle/current" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/configuration" />
           </set>
         </option>
       </GradleProjectSettings>
