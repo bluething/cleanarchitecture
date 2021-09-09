@@ -1,4 +1,4 @@
 rootProject.name = 'buckpal'
 include 'common'
 include 'application'
-
+include 'adapters:web'
