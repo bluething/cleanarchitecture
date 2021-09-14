@@ -1,0 +1,10 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+Account *-- AccountId
+Account *-- Money
+Account *-- ActivityWindow
+ActivityWindow "1" o-- "*" Activity
+Activity *-- ActivityId
+
+@enduml
