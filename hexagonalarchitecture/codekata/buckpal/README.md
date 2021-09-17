@@ -63,3 +63,30 @@ Why?
 - Using one controller will only result in a class with a large number of rows, hard to maintain or read. Usually this class will violate SRP.  
 - The same goes for the test code.  
 - If using one controller we will usually use the same data structure, share between the api. It didn't work, each api need different data structure.
+
+### Implementing a Persistence Adapter
+
+![high level persistence adapter dip](https://github.com/bluething/cleanarchitecture/blob/main/images/highleveldippersistenceadapter.png?raw=true)  
+The persistence adapter is a "driven" or "outgoing" adapter, because it's called by the application and not the other way around.  
+Naturally, at runtime, we still have a dependency from our application core to the persistence adapter.
+
+Responsibilities of persistence adapter:  
+1. Takes input  
+2. Maps input into a database format  
+3. Sends input to the database  
+4. Maps database output into an application format  
+5. Returns output
+
+The input model may be a domain entity, or an object dedicated to a specific database operation, as specified by the interface.  
+The input model lies within the application core and not within the persistence adapter.  
+It then _maps_ the input model to a format it can work with to modify or query the database.
+
+Will we only have a single repository? No, remember ISP.  
+We can create repository for each domain or per bounded context.  
+![slice repository](https://github.com/bluething/cleanarchitecture/blob/main/images/slicerepoperaggregate.png?raw=true)
+
+Example for slicing by bounded context  
+![slice repo by bounded context](https://github.com/bluething/cleanarchitecture/blob/main/images/slicerepohardboundaries.png?raw=true)
+
+What about database transactions, the persistence adapter doesn't know which other database operations are part of the same use case?  
+Put this responsibility to application (inside) part, using AOP or Spring `@Transactional` annotation.
