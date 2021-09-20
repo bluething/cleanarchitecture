@@ -2,6 +2,7 @@ package io.github.bluething.cleanarchitecture.hexagonalarchitecture.buckpal.adap
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -9,6 +10,7 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "activity")
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 public class ActivityJpaEntity {
     @Id
