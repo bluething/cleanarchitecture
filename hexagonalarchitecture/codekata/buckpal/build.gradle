@@ -27,4 +27,8 @@ subprojects {
         targetCompatibility = 11
     }
 
+    test {
+        useJUnitPlatform()
+    }
+
 }
