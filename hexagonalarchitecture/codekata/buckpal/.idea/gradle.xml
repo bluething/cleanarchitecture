@@ -26,7 +26,14 @@
         <option name="gradleHome" value="$USER_HOME$/.sdkman/candidates/gradle/current" />
         <option name="modules">
           <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/adapters" />
             <option value="$PROJECT_DIR$/adapters/persistence" />
+            <option value="$PROJECT_DIR$/adapters/web" />
+            <option value="$PROJECT_DIR$/application" />
+            <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/configuration" />
+            <option value="$PROJECT_DIR$/testdata" />
           </set>
         </option>
       </GradleProjectSettings>
@@ -36,7 +43,14 @@
         <option name="gradleHome" value="$USER_HOME$/.sdkman/candidates/gradle/current" />
         <option name="modules">
           <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/adapters" />
+            <option value="$PROJECT_DIR$/adapters/persistence" />
+            <option value="$PROJECT_DIR$/adapters/web" />
             <option value="$PROJECT_DIR$/application" />
+            <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/configuration" />
+            <option value="$PROJECT_DIR$/testdata" />
           </set>
         </option>
       </GradleProjectSettings>
@@ -46,7 +60,14 @@
         <option name="gradleHome" value="$USER_HOME$/.sdkman/candidates/gradle/current" />
         <option name="modules">
           <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/adapters" />
+            <option value="$PROJECT_DIR$/adapters/persistence" />
+            <option value="$PROJECT_DIR$/adapters/web" />
+            <option value="$PROJECT_DIR$/application" />
             <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/configuration" />
+            <option value="$PROJECT_DIR$/testdata" />
           </set>
         </option>
       </GradleProjectSettings>
@@ -56,7 +77,14 @@
         <option name="gradleHome" value="$USER_HOME$/.sdkman/candidates/gradle/current" />
         <option name="modules">
           <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/adapters" />
+            <option value="$PROJECT_DIR$/adapters/persistence" />
+            <option value="$PROJECT_DIR$/adapters/web" />
+            <option value="$PROJECT_DIR$/application" />
+            <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/configuration" />
+            <option value="$PROJECT_DIR$/testdata" />
           </set>
         </option>
       </GradleProjectSettings>
