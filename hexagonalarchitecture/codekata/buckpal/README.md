@@ -90,3 +90,21 @@ Example for slicing by bounded context
 
 What about database transactions, the persistence adapter doesn't know which other database operations are part of the same use case?  
 Put this responsibility to application (inside) part, using AOP or Spring `@Transactional` annotation.
+
+### How about testing?
+
+![testing pyramid](https://github.com/bluething/cleanarchitecture/blob/main/images/testingpyramid.png?raw=true)  
+The basic statement is that we should have high coverage of fine-grained tests that are cheap to build, easy to maintain, fast-running, and stable.  
+Once tests combine multiple units and cross-unit boundaries, architectural boundaries, or even system boundaries, they tend to become more expensive to build, slower to run, and more brittle (failing due to some configuration error instead of a functional error).
+
+- Unit test  
+  A unit test usually instantiates a single class and tests its functionality through its interface.
+- Integration test  
+  The integration tests will cross the boundaries, so the objects graph is not complete or must work against mocks at some point.
+- System test  
+In system test we have complete object graph. We verify whether a certain use case works as expected through all the layers of the application.
+
+How to create unit test for stateless class, for example use case class?  
+We can't verify the state in "then" section, so we verify the interaction with certain methods on its (mocked) dependencies.  
+Because this kind of test is vulnerable to changes in the structure of the code under test and not only its behavior, think about most important interaction that the class have.  
+No need to test all interactions.
