@@ -21,4 +21,7 @@ Where's our business logic? "inside" the hexagon.
 
 ### Read More
 
-[Hexagonal architecture](https://alistair.cockburn.us/hexagonal-architecture/)
+[Hexagonal architecture](https://alistair.cockburn.us/hexagonal-architecture/)  
+Hombergs, T. (2019). Get your hands dirty on clean architecture: A hands-on guide to creating clean web applications with code examples in Java. Packt Publishing Limited.  
+[buckpal github](https://github.com/thombergs/buckpal)  
+[spring-hexagonal-architecture github](https://github.com/rdelgatte/spring-hexagonal-architecture)
