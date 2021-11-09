@@ -5,11 +5,11 @@ import lombok.Getter;
 import java.math.BigDecimal;
 
 @Getter
-class Account {
+public class Account {
     private final long accountNo;
     private final BigDecimal accountBalance;
 
-    Account(long accountNo, BigDecimal accountBalance) {
+    public Account(long accountNo, BigDecimal accountBalance) {
         this.accountNo = accountNo;
         this.accountBalance = accountBalance;
     }
