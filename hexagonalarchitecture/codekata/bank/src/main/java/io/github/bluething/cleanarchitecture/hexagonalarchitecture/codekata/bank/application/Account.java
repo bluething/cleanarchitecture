@@ -1,4 +1,4 @@
-package io.github.bluething.cleanarchitecture.hexagonalarchitecture.codekata.bank.application.domain;
+package io.github.bluething.cleanarchitecture.hexagonalarchitecture.codekata.bank.application;
 
 import lombok.Getter;
 
