@@ -3,5 +3,5 @@ package io.github.bluething.cleanarchitecture.hexagonalarchitecture.codekata.ban
 import java.math.BigDecimal;
 
 public interface Withdraw {
-    boolean withdraw(Long accountNo, BigDecimal withdrawalAmount);
+    boolean withdraw(Long accountNo, BigDecimal withdrawalAmount) throws Exception;
 }
