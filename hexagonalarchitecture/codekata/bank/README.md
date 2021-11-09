@@ -1,0 +1,1 @@
+Modified from [https://www.javainuse.com/spring/boot_hex](https://www.javainuse.com/spring/boot_hex)
